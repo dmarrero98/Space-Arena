@@ -75,12 +75,6 @@ class Player:
         self.hitbox = (x+3, y, 50, 54)
         return pygame.draw.rect(screen, (0,0,0), self.hitbox, 1)
 
-def background(file_name):
-    scene = pygame.image.load(file_name)
-    scene = pygame.transform.scale(scene, (800, 600))
-    screen.blit(scene, (0,0))
-
-
 #out of bounds limit for player
 x_limit = 0, 800-playerChar.get_width()
 y_limit = 0, 600-playerChar.get_height()-250
